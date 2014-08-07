@@ -1,0 +1,370 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Visitor_VisitorMaster, App_Web_gtuldfxz" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<%@ Register assembly="FlashControl" namespace="Bewise.Web.UI.WebControls" tagprefix="Bewise" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<style type="text/css">
+ 
+ .modalBackground {
+	background-color:gray;
+	filter:alpha(opacity=70);
+	}
+ .modalPopup {
+	border: 2px solid Gray;
+        background-color:white;
+	    padding:2px;
+	    width:150px;
+        text-align: center;
+    }
+
+ .modalPopup p {
+    padding: 5px;
+             height: 27px;
+         }
+        </style>
+        
+        
+        <script type="text/javascript" language="javascript">
+            // Move an element directly on top of another element (and optionally
+            // make it the same size)
+            function Cover(bottom, top, ignoreSize) {
+                var location = Sys.UI.DomElement.getLocation(bottom);
+                top.style.position = 'absolute';
+                top.style.top = location.y + 'px';
+                top.style.left = location.x + 'px';
+                if (!ignoreSize) {
+                    top.style.height = bottom.offsetHeight + 'px';
+                    top.style.width = bottom.offsetWidth + 'px';
+                }
+            }
+        </script>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="1st side/style.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .oferta_content
+        {
+            width: 535px;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main_container">
+	<div class="top_bar">
+    	<div class="top_search">
+        	<div class="search_text"><a href="#">Advanced Search</a></div>
+            <input type="text" class="search_input" name="search" />
+            <input type="image" src="1st side/images/search.gif" class="search_bt"/>
+        </div>
+        
+    </div>
+
+	<div id="header">
+        
+        <div id="logo">
+        
+	        
+	        <asp:Image ID="Image8" runat="server" Height="140px" ImageUrl="~/Images/50.jpg" 
+                Width="230px" />
+        
+	        
+	    </div>
+        
+        <div class="oferte_content" margin-right:"50px">
+        	<div class="oferta">
+            
+           		<div class="oferta_content">
+                	<div class="oferta_title" align="left">
+                               
+                                &nbsp;
+                                <asp:Image ID="Image7" runat="server" Height="65px" ImageUrl="~/Images/46.jpg" 
+                                    Width="85px" ImageAlign="Middle" 
+                                    style="margin-left: 0px; margin-top: 0px" />
+                                <asp:Label ID="Lbltitle"  align="center" runat="server" Text="Cyber Wealth for Health" 
+                                        style="font-family: 'Vladimir Script'; font-size: xx-large;" 
+                                    ForeColor="#336699" Height="30px" Width="311px"></asp:Label>
+                                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="Label1" runat="server" ForeColor="#CCFFFF" 
+                                    Text="  We care, where you care" 
+                                    
+                                    
+                                    
+                                    
+                                    style="font-family: 'Vladimir Script'; font-size: x-large; margin-top: 0px; color: #CC0000;" Height="23px" 
+                                    Width="223px"></asp:Label>
+                                <br />
+                                <br />
+                                &nbsp;&nbsp;&nbsp; </div>
+                            
+                </div>
+               <%-- <div class="oferta_pagination">
+                
+                     <span class="current">1</span>
+                     <a href="">2</a>
+                     <a href="">3</a>
+                     <a href="">4</a>
+                     <a href="">5</a>  
+                             
+                </div>        --%>
+                
+                </div>
+                    
+            </div>
+        
+
+    </div>
+    
+   <div id="main_content"> 
+   
+            <div id="menu_tab">
+                <div class="left_menu_corner">
+                </div>
+                <ul class="menu">
+  
+                    <li><a href="Home.aspx" class="nav1">Home</a></li>  
+                         <li class="divider"></li>
+                         <li><a href="Login.aspx" class="nav2">My account</a></li>
+                         <li class="divider"></li>
+                         <li>
+        <asp:LinkButton ID="OpenButton" runat="server" class="nav2" style="color: #676D77" >Sign Up</asp:LinkButton></li>
+      
+                   
+        <asp:Panel ID="AnimatedModalPopupPanel" runat="server" BorderStyle="Ridge" Height="30"
+            Style="display: none" CssClass="modalPopup" Direction="LeftToRight" Width="50" 
+                                 HorizontalAlign="Center">
+            <table style="height: 30%; width: 50% " >
+            <tr>
+            
+            <td>
+            
+            </td>
+            <td>
+            </td></tr>
+             <tr>
+            
+            <td>
+            
+            </td>
+            <td>
+            </td></tr>
+             <tr>
+            
+            <td>
+            
+            </td>
+            <td>
+            </td></tr>
+             <tr>
+            
+            <td>
+            
+            </td>
+            <td>
+            </td></tr>
+             <tr>
+            
+            <td>
+            
+            </td>
+            <td>
+            </td></tr>
+             <tr>
+            
+            <td>
+            
+            </td>
+            <td>
+            </td></tr>
+             <tr>
+            
+            <td>
+            
+            </td>
+            <td>
+            </td></tr>
+                <tr align="left" style="text-align:left; ">
+                    <td style="text-align: left; vertical-align: top" valign="top" colspan ="1">
+                       
+
+                        <asp:RadioButton ID="RadioButton1" runat="server" GroupName="rdg" Text="Doctor" AutoPostBack="true" OnCheckedChanged="RadioButton1_CheckedChanged"  />&nbsp;&nbsp;&nbsp;</td>
+                      <td> <asp:Image ID="Image1" runat="server"  ImageUrl="~/Images/71.jpg" Height="100px" Width ="70px"/></td></tr>
+                       <tr  align="center" style="text-align:center; "> 
+                       <td style="text-align: left; vertical-align: top" valign="top"><asp:RadioButton ID="RadioButton2" runat="server" GroupName="rdg" AutoPostBack="true" Text="Patient" OnCheckedChanged="RadioButton2_CheckedChanged" /></td>
+                      <td>
+                           <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/images (15).jpg" 
+                               Height ="100px" Width ="70px" />
+                       </td>
+                       </tr>
+                       
+                   
+                
+                <tr>
+                    <td style="text-align: center; vertical-align: bottom" valign="bottom">
+                        <asp:Button ID="CloseButton" runat="server" Text="Close"  />
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
+                    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                         </asp:ToolkitScriptManager>
+        <asp:ModalPopupExtender ID="OpenButton_AnimatedModalPopupExtender1" runat="server"
+            CancelControlID="CloseButton" Enabled="True" PopupControlID="AnimatedModalPopupPanel"
+            TargetControlID="OpenButton">
+            
+ <Animations>
+ <OnShowing>
+            
+ <Sequence>
+            
+ <StyleAction AnimationTarget="CloseButton" Attribute="display" Value="none" />
+            
+ <Resize Duration="0" Height="50px" Width="50px" />
+            
+ </Sequence>
+            
+ </OnShowing>
+            
+ <OnShown>
+            
+ <Sequence>
+            
+<Parallel>
+            
+ <FadeIn />
+            
+ <Scale ScaleFactor="5" Center="True" />
+            
+ </Parallel>
+            
+ <StyleAction AnimationTarget="CloseButton" Attribute="display" Value="" />
+            
+ </Sequence>
+            
+ </OnShown>
+            
+ <OnHiding>
+            
+ <Sequence>
+            
+ <StyleAction AnimationTarget="CloseButton" Attribute="display" Value="none" />
+            
+<Parallel>
+            
+ <FadeOut />
+            
+ <Scale ScaleFactor="5" Center="True" />
+            
+ </Parallel>
+            
+ </Sequence>
+            
+ </OnHiding>
+            
+ </Animations>
+ </asp:ModalPopupExtender>
+            
+    
+   
+                         <li class="divider"></li>
+                         <li><a href="About Us.aspx" class="nav4">
+                              About Us</a></li>
+                         <li class="divider"></li>
+                         <li><a href="Feedback.aspx" class="nav3">
+                              Feedback</a></li>
+                         <li class="divider">&nbsp;</li> 
+                          <li><a href="Why Us.aspx" class="nav5">Why Us</a></li>
+                          <li class="divider"></li>                
+                         <li><a href="Contact Us.aspx" class="nav6">Contact Us</a></li>
+                         <li class="divider"></li>
+                         <li><a href="Advertisement.aspx" class="nav7">Advertise With Us</a></li>
+                        </ul>
+                   <div class="right_menu_corner">
+                </div>
+
+            </div><!-- end of menu tab -->
+            
+    
+   <div class="left_content">
+   
+    
+        
+
+    
+     <div class="banner_adds">
+  
+      
+         <%--<Bewise:FlashControl ID="FlashControl1" runat="server" Height="243px" 
+             Width="190px" MovieUrl="~/Files/Left_Division.swf" 
+             style="margin-top: 0px" Loop="True" Menu="True" Scale="Exactfit" 
+             WMode="Transparent" autopostback="false" />--%>
+         <asp:Image ID="Image3" runat="server" Height="243px" 
+             Width="190px" ImageUrl="~/Images/slogn.jpg" />
+
+             
+      
+        </div>
+       
+    
+ </div><!-- end of left content -->
+   
+   <div class="center_content">
+ <div>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+   </div><!-- end of center content -->
+   
+   <div class="right_content">
+     
+     
+  </div><!-- end of right content -->  
+     
+     
+    </div> 
+   
+            
+   </div><!-- end of main content -->
+   
+   
+   
+   <div class="footer">
+   
+
+        <div class="left_footer">
+        &nbsp;</div>
+        
+        <div class="center_footer" align="left">
+            <asp:Image ID="Image5" runat="server" Height="100px" 
+                ImageUrl="~/Images/imagesWPUPSAOF.jpg" Width="215px" />
+            <br />
+            <br />&nbsp;</div>
+        
+        <div class="right_footer">
+            <a href="Home.aspx">Home</a>
+        <a href="About Us.aspx">About Us</a>
+        <a href="Why Us.aspx">Why Us</a>
+        <a href="Contact Us.aspx">Contact Us</a>
+        </div>   
+   
+   </div>                 
+
+
+</div>
+<!-- end of main_container -->
+    
+   
+
+    </form>
+</body>
+</html>

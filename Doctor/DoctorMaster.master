@@ -1,0 +1,254 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Doctor_DoctorMaster, App_Web_nhc2m42s" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<%@ Register assembly="FlashControl" namespace="Bewise.Web.UI.WebControls" tagprefix="Bewise" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <style type="text/css">
+ 
+ .modalBackground {
+	background-color:gray;
+	filter:alpha(opacity=70);
+	}
+ .modalPopup {
+	border: 2px solid Gray;
+        background-color:white;
+	    padding:2px;
+	    width:150px;
+        text-align: center;
+    }
+
+ .modalPopup p {
+    padding: 5px;
+             height: 27px;
+         }
+        </style>
+        
+        
+        <script type="text/javascript" language="javascript">
+            // Move an element directly on top of another element (and optionally
+            // make it the same size)
+            function Cover(bottom, top, ignoreSize) {
+                var location = Sys.UI.DomElement.getLocation(bottom);
+                top.style.position = 'absolute';
+                top.style.top = location.y + 'px';
+                top.style.left = location.x + 'px';
+                if (!ignoreSize) {
+                    top.style.height = bottom.offsetHeight + 'px';
+                    top.style.width = bottom.offsetWidth + 'px';
+                }
+            }
+        </script>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="1st side/style.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .oferta_content
+        {
+            width: 535px;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+     <div id="main_container">
+	<div class="top_bar">
+    	<div class="top_search">
+        	<div class="search_text"><a href="#">Advanced Search</a></div>
+            <input type="text" class="search_input" name="search" />
+            <input type="image" src="1st side/images/search.gif" class="search_bt"/>
+        </div>
+        
+    </div>
+
+	<div id="header">
+        
+        <div id="logo">
+        
+	        
+	        <asp:Image ID="Image8" runat="server" Height="153px" ImageUrl="~/Images/50.jpg" 
+                Width="230px" />
+        
+	        
+	    </div>
+        
+        <div class="oferte_content" margin-right:"50px">
+        	<div class="oferta">
+            
+           		<div class="oferta_content">
+                	<div class="oferta_title" align="left">
+                               
+                                &nbsp;
+                                <asp:Image ID="Image7" runat="server" Height="65px" ImageUrl="~/Images/46.jpg" 
+                                    Width="85px" ImageAlign="Middle" 
+                                    style="margin-left: 0px; margin-top: 0px" />
+                                <asp:Label ID="Lbltitle"  align="center" runat="server" Text="Cyber Wealth for Health" 
+                                        style="font-family: 'Vladimir Script'; font-size: xx-large;" 
+                                    ForeColor="#336699" Height="30px" Width="311px"></asp:Label>
+                                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="Label1" runat="server" ForeColor="#CCFFFF" 
+                                    Text="  We care, where you care" 
+                                    
+                                    
+                                    
+                                    
+                                    style="font-family: 'Vladimir Script'; font-size: x-large; margin-top: 0px; color: #CC0000;" Height="23px" 
+                                    Width="223px"></asp:Label>
+                                <br />
+                                <br />
+                                &nbsp;&nbsp;&nbsp; </div>
+                            
+                </div>
+               <%-- <div class="oferta_pagination">
+                
+                     <span class="current">1</span>
+                     <a href="">2</a>
+                     <a href="">3</a>
+                     <a href="">4</a>
+                     <a href="">5</a>  
+                             
+                </div>        --%>
+                
+                </div>
+                    
+            </div>
+        
+
+    </div>
+    
+   <div id="main_content"> 
+   
+            <div id="menu_tab">
+                <div class="left_menu_corner">
+                </div>
+                <ul class="menu">
+  
+                         <li><a href="D_After Login.aspx" class="nav1">Home</a></li>  
+                         <li class="divider"></li>
+                         <li>
+                             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton></li>
+                         <li class="divider"></li>
+                         <li><a href="D_Way Direction.aspx" class="nav7">View Direction</a></li>
+                         <li class="divider"></li>
+                         <li><a href="D_About Us.aspx" class="nav4">About Us</a></li>
+                         <li class="divider"></li>
+                         <li><a href="D_Feedback.aspx" class="nav3">Feedback</a></li>
+                         <li class="divider"></li> 
+                         <li><a href="D_Upload Article.aspx" class="nav5">Upload Article</a></li>
+                         <li class="divider"></li>                
+                         <li><a href="D_Contact Us.aspx" class="nav6">Contact Us</a></li>
+                         <li class="divider"></li>
+                         <li><a href="D_Location.aspx" class="nav7">View Map</a></li>
+                  </ul>
+
+            </div><!-- end of menu tab -->
+            
+    
+   <div class="left_content">
+    <div class="title_box">Categories</div>
+    
+        <ul class="left_menu">
+        <li class="odd"><a href="D_Add Tips.aspx">Add Tip of the Day</a></li>
+        <li class="even"><a href="D_Add Recipee.aspx">Add Recipee of the Day</a></li>
+        <li class="odd"><a href="D_Add Exercise.aspx">Add Daily Exercises</a></li>
+        <li class="even"><a href="D_Add Vaccine Info.aspx">Add Vaccine Information</a></li>
+        <li class="odd"><a href="D_Change Password.aspx">Change Password</a></li>
+        <li class="even"><a href="D_Solution.aspx">Give Solution</a></li>
+        <%--<li class="odd"><a href="">Processors</a></li>
+        <li class="even"><a href="">Motherboards</a></li>
+        <li class="odd"><a href="">Desktops</a></li>
+        <li class="even"><a href="">Laptops & Notebooks</a></li>
+        <li class="odd"><a href="">Processors</a></li>
+        <li class="even"><a href="">Motherboards</a></li>--%>
+        </ul>
+
+    
+     <div class="banner_adds">
+  
+      
+         <%--<Bewise:FlashControl ID="FlashControl1" runat="server" Height="243px" 
+             Width="190px" MovieUrl="~/Files/Left_Division.swf" 
+             style="margin-top: 0px" Loop="True" Menu="True" Scale="Exactfit" 
+             WMode="Transparent" autopostback="false" />--%>
+         <asp:Image ID="Image3" runat="server" Height="243px" 
+             Width="190px" ImageUrl="~/Images/slogn.jpg" />
+
+             
+      
+        </div>
+       
+    
+ </div><!-- end of left content -->
+   
+   
+   <div class="center_content">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     </div><!-- end of center content -->
+   
+   <div class="right_content">
+     
+     
+     
+   <%-- <div class="title_box">Manufacturers</div>
+    
+        <ul class="left_menu">
+        <li class="odd"><a href="">Sony</a></li>
+        <li class="even"><a href="">Samsung</a></li>
+         <li class="odd"><a href="">Daewoo</a></li>
+        <li class="even"><a href="">LG</a></li>
+         <li class="odd"><a href="">Fujitsu Siemens</a></li>
+         <li class="even"><a href="">Motorola</a></li>
+        <li class="odd"><a href="">Phillips</a></li>
+        <li class="even"><a href="">Beko</a></li>
+        </ul>--%>      
+     
+     
+    
+    
+   </div><!-- end of right content -->   
+    
+            
+   </div><!-- end of main content -->
+   
+   
+   
+   <div class="footer">
+   
+
+        <div class="left_footer">
+        &nbsp;</div>
+        
+        <div class="center_footer" align="left">
+            <asp:Image ID="Image5" runat="server" Height="100px" 
+                ImageUrl="~/Images/imagesWPUPSAOF.jpg" Width="215px" />
+            <br />
+            <br />&nbsp;</div>
+        
+        <div class="right_footer">
+            <a href="Doctor After Login.aspx">Home</a>
+        <a href="D_About Us.aspx">About Us</a>
+        <a href="D_Why Us.aspx">Why Us</a>
+        <a href="D_Contact Us.aspx">Contact Us</a>
+        </div>   
+   
+   </div>                 
+
+
+</div>
+<!-- end of main_container -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flash_parameters copyright="socusoftFSMTheme">
+    <preferences>
+        <global>
+            <basic_property html_title="Title" loadStyle="Pie" hideAdobeMenu="false" photoDynamicShow="true" enableURL="true" startAutoPlay="true" screenfullButton="false"/>
+            <music_property path="" stream="true" loop="true"/>
+            <description_property enable="true" backgroundColor="0xfffbf0" backgroundAlpha="30" cssText="a:link{text-decoration: underline;} a:hover{color:#ff0000; text-decoration: none;} a:active{color:#0000ff;text-decoration: none;} .blue {color:#0000ff; font-size:15px; font-style:italic; text-decoration: underline;} .body{color:#ff5500;font-size:20px;}" align="top"/>
+            <background_property backgroundColor="0xffffff" mode="tile"/>
+        </global>
+        <photo>
+            <basic_property photoBackColor="0xffffff" photoTitleColor="0x808080" PhotoMaxWidth="30" PhotoMaxHeight="10" EnableColorTransform="false"/>
+        </photo>
+        <thumbnail>
+            <basic_property thumWidth="30" thumHeight="10" thumbnailColor="0xffffff" thumborder="0" thumradius="30" Enableshadow="true" shapeborder="2" shapeAlpha="70" rotationspeed="2" Rdirection="inward"/>
+        </thumbnail>
+    </preferences>
+    <album>
+        <slide jpegURL="~/thumbs/25411.jpg" d_URL="~/slides/25411.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="25411" width="328" height="208"/>
+        <slide jpegURL="~/thumbs/33.jpg" d_URL="~/slides/33.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="33" width="640" height="480"/>
+        <slide jpegURL="~/thumbs/40.jpg" d_URL="~/slides/40.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="40" width="328" height="208"/>
+        <slide jpegURL="~/thumbs/4546.jpg" d_URL="~/slides/4546.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="4546" width="328" height="208"/>
+        <slide jpegURL="~/thumbs/46.jpg" d_URL="~/slides/46.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="46" width="224" height="168"/>
+        <slide jpegURL="~/thumbs/522.jpg" d_URL="~/slides/522.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="522" width="306" height="164"/>
+        <slide jpegURL="~/thumbs/7445.jpg" d_URL="~/slides/7445.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="7445" width="90" height="74"/>
+        <slide jpegURL="~/thumbs/80.jpg" d_URL="~/slides/80.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="80" width="240" height="190"/>
+        <slide jpegURL="~/thumbs/888.jpg" d_URL="~/slides/888.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="888" width="274" height="184"/>
+        <slide jpegURL="~/thumbs/gffvg.jpg" d_URL="~/slides/gffvg.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="gffvg" width="260" height="194"/>
+        <slide jpegURL="~/thumbs/imagesL2S3IF1O.jpg" d_URL="~/slides/imagesL2S3IF1O.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="imagesL2S3IF1O" width="260" height="194"/>
+        <slide jpegURL="~/thumbs/imagesPWBALU3W.jpg" d_URL="~/slides/imagesPWBALU3W.jpg.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2"  title="imagesPWBALU3W" width="220" height="166"/>
+    </album>
+</flash_parameters>
